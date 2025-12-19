@@ -1,3 +1,9 @@
+#Iseseisev töö
+#Kauri Varbola
+#19.12.2025
+
+
+
 import turtle
 t = turtle.Turtle()
 #t.hideturtle()
