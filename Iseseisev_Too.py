@@ -1,6 +1,6 @@
-#Iseseisev töö
+#Iseseisev töö - Kujundid 14, 15
 #Kauri Varbola
-#19.12.2025
+#05.01.2025
 
 
 
