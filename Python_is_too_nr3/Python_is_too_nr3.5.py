@@ -1,0 +1,10 @@
+# 3.5
+from datetime import *
+failinimi = input("Sisestage failinimi: ")
+fail = open(failinimi, encoding="UTF-8")
+nr = 1
+
+for rida in fail:
+    if nr == datetime.now().day:
+        print("Vastama tuleb: ", rida, end="")
+    nr += 1
