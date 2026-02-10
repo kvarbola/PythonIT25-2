@@ -1,8 +1,14 @@
-#4.3
+# 4.3
 
-sook = 10
-rent = 55
-kylalised = int(input())
+kutsutud = int(input("Mitu külalist on kutsutud?: "))
+tulevad = int(input("Mitu külalist tulevad?: "))
 
 def eelarve(a):
-    kogusumma = 
+    kogusumma = a * 10 + 55
+    return kogusumma
+
+print("Maksimaalne eelarve:", eelarve(kutsutud), "eurot")
+print("Minimaalne eelarve:", eelarve(tulevad), "eurot")
+
+
+
