@@ -1,16 +1,12 @@
-# 4.5
+# 4.5 mündid
 
-fail = open("mündid.txt", encoding="UTF-8")
+nimi = input("Sisesta failinimi: ")
 
-summa = 0
-
-for rida in fail:
-    if rida == 1:
-        summa+=int(rida)
-    elif rida == 2:
-        summa+=int(rida)
-    elif rida == 5:
-        summa+=int(rida)
-print(f"Siin on summa: {summa}")
+def pronksikarva_summa(a):
+    fail = open("mündid.txt", encoding="UTF-8")
     
+    for rida in fail:
+        print(rida)
+    return "lõpp"
 
+pronksikarva_summa(nimi)
