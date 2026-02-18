@@ -49,8 +49,7 @@ def peegelda_porkumisel():
         ring.setheading(uus_nurk)
     # Tee kaheks, kui maad puudub, siis exit
     if ring.ycor() <= -290:
-        # turtle.bye()
-        print(ring.ycor())
+        turtle.bye()
     if ring.ycor() >= 300 or ring.ycor() <= -300:
         uus_nurk = 360 - nurk
         ring.setheading(uus_nurk)
