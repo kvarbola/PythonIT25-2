@@ -40,7 +40,6 @@ def liigu_paremale():
 # ringi funktsioonid
 def peegelda_porkumisel():
     global punktid
-    global ristkylikpos
     nurk = ring.heading()
     if ring.xcor() >= 300 or ring.xcor() <= -300:
         uus_nurk = 180 - nurk
@@ -49,18 +48,27 @@ def peegelda_porkumisel():
         ring.setheading(uus_nurk)
     # Tee kaheks, kui maad puudub, siis exit
     if ring.ycor() <= -290:
+        print("Mäng läbi")
         turtle.bye()
     if ring.ycor() >= 300 or ring.ycor() <= -300:
         uus_nurk = 360 - nurk
         ring.setheading(uus_nurk)
+    x = ristkylik.xcor()
+    y = ristkylik.ycor()
 
-    # kui puudub ristkülikut, siis põrkab tagasi ja saab punkti
-    if ring.ycor() <= -290:
-        turtle.goto(-100, 250)
-        turtle.clear()
-        turtle.write(f"Punkit: {punktid}", font=("Arial", 32, "normal"))
+    # ristkülikust põrkumine
+    if ring.ycor() <= y + 10 and ring.ycor() >= y - 10 and ring.xcor() <= x + 50 and ring.xcor() >= x -50:
+        uus_nurk = 360 - nurk
+        ring.setheading(uus_nurk)
         punktid +=1
-        
+        # punkti saamine
+        turtle.clear()
+        turtle.penup()
+        turtle.goto(-250, 200)
+        turtle.pendown()
+        turtle.write(f"Punktid: {punktid}", font=("Arial", 32, "normal"))
+
+
 def ring_liigu():
     ring.forward(kiirus)
     peegelda_porkumisel()
