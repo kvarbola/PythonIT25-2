@@ -19,8 +19,8 @@ def create_thumbnails(source_dir, thumb_dir, size=(350, 350)):
             thumb_img = ImageOps.fit(img, size, centering=(0.5, 0.5))
             img.close()
            
-            filename = str(nr)+".jpg"
             # Pisipildi salvestamine
+            filename = str(nr)+".jpg"
             thumb_path = os.path.join(thumb_dir, filename)
             thumb_img.save(thumb_path, "JPEG")
            
