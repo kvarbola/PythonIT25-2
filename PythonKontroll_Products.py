@@ -29,8 +29,8 @@ if response.status_code == 200:
 
     print(f"Kallim toode on {KallimNimi[0]}. Hind: {max(hinnad)}€")
     print(" ")
-    print("----LAOSEIS ALLA 20NE----")
 
+    print("----LAOSEIS ALLA 20NE----")
     for line in data[yl]:
         if line['stock'] < 20:
             print(line['title'])
